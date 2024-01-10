@@ -1,0 +1,21 @@
+import cv2
+from google.colab.patches import cv2_imshow
+def preprocess
+_image (image_path):
+img = cv2. imread image_path, cv2. IMREAD_GRAYSCALE)
+ret, img - cv2. threshold(img, 127, 255, Cv2. THRESH _BINARY)
+return img
+def perform_verification (image_path):
+verified = True
+return verified
+def main):
+image_path = '/content/fingerprint.jpg'
+fingerprint_image - preprocess_image(image_path)
+cv2_imshow fingerprint_image)
+verification result - perform_verification(image_path)
+if verification result:
+print("Person is verified.")
+else:
+print"Verification failed. "Il
+if name == "main
+main
